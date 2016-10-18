@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:label="Home"
+    tools:context="com.diete.av.first"
+    >
+
+
+    <ImageView
+        android:layout_width="375dp"
+        android:layout_height="259dp"
+        android:src="@drawable/av2"
+        android:id="@+id/imageView"
+        android:maxHeight="500dp"
+        android:maxWidth="210dp"
+        android:contentDescription="@string/app_name"
+        android:layout_marginBottom="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/retete"
+        android:layout_marginEnd="23dp" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:text="@string/matei"
+        android:id="@+id/textView"
+        android:textColor="#BA55D3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:maxLines="6"
+        android:scrollbars="vertical"
+        android:scrollbarSize="2dp"
+        android:layout_height="220dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/fbbutton" />
+
+    <Button
+        android:text="@string/IMC"
+        android:layout_marginTop="9dp"
+        android:layout_width="120dp"
+        android:layout_below="@+id/retete"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/imc"
+        android:textSize="10sp"
+        android:layout_height="44dp"
+        android:textStyle="normal|bold"
+        />
+
+    <Button
+        android:text="@string/Creaza_reteta"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/imc"
+        android:layout_marginTop="13dp"
+        android:id="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/imageView"
+        android:textStyle="normal|bold"
+        android:layout_height="55dp"/>
+
+    <Button
+        android:layout_width="120dp"
+        android:id="@+id/fbbutton"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:text="Facebook"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_height="40dp"/>
+
+    <Button
+        android:text="@string/retete"
+        android:id="@+id/retete"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+        android:typeface="sans"
+        android:textColor="@android:color/holo_green_light"
+        android:textStyle="normal|bold"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/fbbutton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="9dp"
+        android:textAllCaps="false"/>
+</RelativeLayout>

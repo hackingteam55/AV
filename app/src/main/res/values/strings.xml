@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">"AV "</string>
+    <string name="matei"> Alexandra vă ajută să obţineţi greutatea dorită cu ajutorul unui plan de nutriţie personalizat.
+Specializată in nutriţie şi managementul greutăţii, promovez echilibrul între nutriţie şi sport.
+Atuurile mele sunt comunicarea, optimismul şi capacitatea de a susţine şi motiva pentru obţinerea rezultatelor dorite.
+    </string>
+    <string name="retete">Rețete</string>
+    <string name="IMC">Indice masă corporală</string>
+    <string name="detalii_IMC">Indicele de masa corporala:
+    Indicele de masă corporală (IMC) (în engleză Body mass index, sau BMI) este un indicator statistic a masei unei persoane raportată la înălțimea persoanei respective. Prin urmare, este utilă numai pentru măsurarea unei populații și nu este folosită pentru a pune diagnosticul asupra unei singure persoane. A fost inventată între anii 1830 și 1850 ce către belgianul Adolphe Quetelet în timpul dezvoltării "fizicii sociale".</string>
+    <string name="kg">kg</string>
+    <string name="cm">cm</string>
+    <string name="calc">Calculează</string>
+    <string name="invalid">Invalid</string>
+    <string name="buton_imc">Detalii IMC</string>
+    <string name="rezultat_imc">Rezultat</string>
+    <string name="Interpretare_imc">Interpretare IMC</string>
+    <string name="Creaza_reteta">Creează o reţetă</string>
+
+</resources>
