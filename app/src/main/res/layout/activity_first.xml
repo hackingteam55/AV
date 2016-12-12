@@ -42,37 +42,14 @@
 
     <Button
         android:text="@string/IMC"
-        android:layout_marginTop="9dp"
         android:layout_width="120dp"
-        android:layout_below="@+id/retete"
-        android:layout_alignParentEnd="true"
         android:id="@+id/imc"
         android:textSize="10sp"
         android:layout_height="44dp"
         android:textStyle="normal|bold"
-        />
-
-    <Button
-        android:text="@string/Creaza_reteta"
-        android:layout_width="wrap_content"
-        android:layout_below="@+id/imc"
-        android:layout_marginTop="13dp"
-        android:id="@+id/button"
+        android:layout_alignBottom="@+id/imageView"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/imageView"
-        android:textStyle="normal|bold"
-        android:layout_height="55dp"/>
-
-    <Button
-        android:layout_width="120dp"
-        android:id="@+id/fbbutton"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="bold"
-        android:clickable="true"
-        android:text="Facebook"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_alignParentEnd="true"
-        android:layout_height="40dp"/>
+        android:layout_marginBottom="23dp"/>
 
     <Button
         android:text="@string/retete"
@@ -83,8 +60,20 @@
         android:textStyle="normal|bold"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_below="@+id/fbbutton"
+        android:textAllCaps="false"
+        android:layout_above="@+id/imc"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="9dp"
-        android:textAllCaps="false"/>
+        android:layout_marginBottom="44dp"/>
+
+    <Button
+        android:layout_width="120dp"
+        android:id="@+id/fbbutton"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:text="Facebook"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="26dp"/>
 </RelativeLayout>

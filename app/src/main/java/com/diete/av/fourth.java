@@ -1,4 +1,5 @@
 package com.diete.av;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,11 +11,28 @@ import android.widget.TextView;
 
 public class fourth extends AppCompatActivity {
 
+    public Button but13;
+
+    public void init2() {
+
+        but13 = (Button) findViewById(R.id.but13);
+        but13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toy = new Intent(fourth.this, fifth.class);
+                startActivity(toy);
+            }
+        });
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourth);
+
+        init2();
 
 
         final Button calc = (Button) findViewById(R.id.calculeaza);

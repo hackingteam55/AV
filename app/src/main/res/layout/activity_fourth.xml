@@ -105,7 +105,7 @@
         android:text="@string/buton_imc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/buton_imc"
+        android:id="@+id/but13"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="39dp"
