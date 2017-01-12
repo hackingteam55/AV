@@ -11,50 +11,40 @@
 
 
     <TextView
-        android:layout_width="500dp"
-        android:text="@string/matei"
         android:id="@+id/textView"
+        android:layout_width="500dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/imageView"
+        android:maxLines="6"
+        android:text="@string/matei"
         android:textColor="#BA55D3"
         android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_alignParentTop="true"
-        android:layout_height="150dp"
-        android:maxLines="6"
-        android:layout_toStartOf="@+id/imageView" />
+        android:textStyle="bold" />
 
     <Button
+        android:id="@+id/retete"
         style="@style/Base.TextAppearance.AppCompat.Body1"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:text="@string/retete"
-        android:background="#BA55D3"
-        android:textColor="@android:color/holo_green_light"
-        android:textStyle="normal|bold"
-        android:id="@+id/retete"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#BA55D3"
+        android:text="@string/retete"
         android:textAllCaps="false"
-        android:layout_alignParentStart="true" />
-
-    <ImageView
-        android:layout_height="300dp"
-        android:src="@drawable/av2"
-        android:id="@+id/imageView"
-        android:baselineAlignBottom="true"
-        android:contentDescription="@string/app_name"
-        android:layout_width="300dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:textColor="@android:color/holo_green_light"
+        android:textStyle="normal|bold" />
 
     <Button
+        android:id="@+id/fbbutton"
         android:layout_width="100dp"
         android:layout_height="45dp"
-        android:id="@+id/fbbutton"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="bold"
-        android:clickable="true"
-        android:text="Facebook"
         android:layout_alignParentBottom="true"
         android:layout_alignTop="@+id/retete"
-        android:layout_toStartOf="@+id/imageView" />
+        android:layout_toStartOf="@+id/imageView"
+        android:clickable="true"
+        android:text="Facebook"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
 
 </RelativeLayout>

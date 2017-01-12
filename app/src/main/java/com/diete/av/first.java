@@ -22,6 +22,8 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import static com.diete.av.R.id.action_bar1;
+
 
 public class first extends AppCompatActivity {
 
@@ -31,6 +33,7 @@ public class first extends AppCompatActivity {
     Button facebook;
     private DrawerLayout mdrawerLayout;
     private ActionBarDrawerToggle mToggle;
+    private Toolbar mToolbar;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -95,6 +98,9 @@ public class first extends AppCompatActivity {
         init();
         init2();
 
+        mToolbar = (Toolbar) findViewById(action_bar1);
+        setSupportActionBar(mToolbar);
+
         mdrawerLayout = (DrawerLayout) findViewById(R.id.drawer1);
         mToggle = new ActionBarDrawerToggle(this, mdrawerLayout, R.string.open, R.string.close);
 
@@ -102,9 +108,6 @@ public class first extends AppCompatActivity {
         mToggle.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-
 
 
         facebook = (Button) findViewById(R.id.fbbutton);
