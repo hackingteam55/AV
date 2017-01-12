@@ -17,6 +17,8 @@ Atuurile mele sunt comunicarea, optimismul şi capacitatea de a susţine şi mot
     <string name="Interpretare_imc">Interpretare IMC</string>
     <string name="Creaza_reteta">Creează o reţetă</string>
     <string name="title_activity_sixth">sixth</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

@@ -6,10 +6,13 @@ import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -24,11 +27,28 @@ public class first extends AppCompatActivity {
 
 
     public Button but3;
+    public Button but1;
+    Button facebook;
+    private DrawerLayout mdrawerLayout;
+    private ActionBarDrawerToggle mToggle;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client2;
+
+    public static Intent openFacebook(Context context) {
+
+        try {
+            context.getPackageManager()
+                    .getPackageInfo("com.facebook.katana", 0);
+            return new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("fb://page/1772337773052523"));
+        } catch (Exception e) {
+            return new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://www.facebook.com/alexandravladnutritionist/?fref=ts"));
+        }
+    }
 
     public void init2() {
 
@@ -43,10 +63,6 @@ public class first extends AppCompatActivity {
         });
     }
 
-    Button facebook;
-
-
-    public Button but1;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -67,6 +83,7 @@ public class first extends AppCompatActivity {
     }
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
@@ -77,6 +94,17 @@ public class first extends AppCompatActivity {
         textView.setMovementMethod(new ScrollingMovementMethod());
         init();
         init2();
+
+        mdrawerLayout = (DrawerLayout) findViewById(R.id.drawer1);
+        mToggle = new ActionBarDrawerToggle(this, mdrawerLayout, R.string.open, R.string.close);
+
+        mdrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+
 
 
         facebook = (Button) findViewById(R.id.fbbutton);
@@ -95,19 +123,16 @@ public class first extends AppCompatActivity {
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client2 = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-    }
 
-    public static Intent openFacebook(Context context) {
 
-        try {
-            context.getPackageManager()
-                    .getPackageInfo("com.facebook.katana", 0);
-            return new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("fb://page/1772337773052523"));
-        } catch (Exception e) {
-            return new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("https://www.facebook.com/alexandravladnutritionist/?fref=ts"));
+
         }
+
+    public boolean onOptionsItemSelected (MenuItem item){
+        if(mToggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     /**
@@ -144,6 +169,7 @@ public class first extends AppCompatActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client2, getIndexApiAction());
         client2.disconnect();
+
     }
 }
 
